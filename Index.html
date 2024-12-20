@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>grand coffee web</title>
+</head>
+
+<body>
+    <!-- ================================header=================================== -->
+    <header>
+        <div class="logo">GrandCoffee</div>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#about">Gallery</a></li>
+                <li><a href="#about">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ======================================home div======================================== -->
+
+    <div id="home">
+        <div id="contain">
+            <h1>Outstanding</h1>
+            <h2>Coffee Shop</h2>
+            <p>Compassiviste Coffee is a promise to our planet and people. Ethically sourced, certified organic, and
+                Fair Trade, each cup supports environmental protection and farmer dignity. Every sip fosters a
+                compassionate world.
+            </p>
+            <button>Learn More</button>
+        </div>
+    </div>
+
+    <!-- ==============================================about us====================================== -->
+
+    <div id="about">
+        <div id="about-text">
+            <h2>About Us</h2>
+            <ul>
+                <li>Grand Coffee is ethically and sustainably sourced, holding both Rainforest Alliance and Label Your
+                    Carbon certifications. </li>
+                <li>Being Rainforest Alliance Certified means our coffee meets rigorous standards for environmental,
+                    social, and economic sustainability. </li>
+                <li>Grand Coffee is proudly USDA Organic Certified and Kosher, reflecting our unwavering commitment to
+                    quality and purity. </li>
+                <li>we ensure that every bean is grown without synthetic pesticides or harmful chemicals, promoting a
+                    healthier environment and a safer product for you. </li>
+            </ul>
+        </div>
+        <div id="about-img">
+            <img src="img/about-coffee.jpg">
+        </div>
+    </div>
+
+    <!-- =================================================Gallery div====================================== -->
+
+    <div id="gallery">
+        <h1>Our Gallery</h1>
+        <p>Discover our flagship line of refreshing cold brew coffee, naturally caffeinated and meticulously crafted in
+            our Winnipeg, Manitoba brewery by cold soaking high-quality, organic coffee grounds for 18 hours, delivering
+            a flavour-forward drinking experience.
+        </p>
+
+        <div id="grid">
+            <div class="grid-item">
+                <img src="img/g1.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g2.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g3.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g4.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g5.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g6.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g7.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g8.png">
+
+            </div>
+            <div class="grid-item">
+                <img src="img/g9.png">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================services div ==================================================== -->
+
+    <div id="services">
+        <h1>Services</h1>
+        <p>Coffee service refers to the many and various styles in which coffee is made available to people, such as in
+            restaurants and hotels. In particular, it sometimes refers to the set of dishes and vessels utilized to
+            serve and consume coffee, akin to the notion of a tea service.
+        </p>
+        <div id="service-div">
+            <div class="original-coffee">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <h2>Original Coffee</h1>
+                    <small>Coffee is a beverage brewed from roasted, ground coffee beans. Darkly colored, bitter, and
+                        slightly acidic</small>
+                    <button id="ori-btn">Read More</button>
+            </div>
+            <div class="coffee-flavor">
+                <i class="fa-solid fa-mug-hot"></i>
+                <h2>Coffee Flavors</h1>
+                    <small>One of the most popular coffee flavors, especially during the fall season, is pumpkin spice.
+                    </small>
+                    <button id="flav-btn">Read More</button>
+            </div>
+            <div class="pleasant-abient">
+                <i class="fa-solid fa-mug-saucer"></i>
+                <h2>Pleasant Abient</h1>
+                    <small>A great coffee shop has a welcoming environment with the right atmosphere and ambience.
+                    </small>
+                    <button id="abi-btn">Read More</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================contact us======================================= -->
+
+    <div id="contact">
+        <h1>Contact Us</h1>
+
+        <div id="div">
+            <div id="form">
+                <form class="form" action="action.php">
+                    <input type="text" id="name" placeholder="Name"><br>
+                    <input type="email" name="" id="email" placeholder="Email"><br>
+                    <input type="number" name="" id="num" placeholder="Phone Number"><br>
+                    <textarea name="" id="mess" cols="25" rows="7" placeholder="Message"></textarea>
+                    <button id="send_btn">Send</button>
+                </form>
+            </div>
+            <div id="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.1890094874793!2d72.97176437425469!3d19.186945248482026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b920a5b0069f%3A0x80d6018b60302fa3!2sNettech%20India!5e0!3m2!1sen!2sin!4v1723702106726!5m2!1sen!2sin"
+                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="fabout">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aperiam, magnam odio perspiciatis
+                repellendus, placeat laudantium quos commodi sint tempora asperiores 
+                </p>
+        </div>
+        <div id="fmenu">
+            <h2>Menu</h2>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Gallery</li>
+                <li>Services</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div id="flink">
+            <h2>Useful Link</h2>
+            <ul>
+                <li>Lorem</li>
+                <li>ipsum</li>
+                <li>dolor</li>
+                <li>placeat</li>
+                <li>commodi</li>
+            </ul>
+        </div>
+        <div id="fcontact">
+            <h2>Contact Us</h2>
+            <ul>
+                <li><i style="color: white; padding-right: 10px;" class="fa-solid fa-location-dot"></i>Address :Thane, West</li>
+                <li><i style="color: white; padding-right: 10px;" class="fa-solid fa-phone"></i>Call : +01 1234567890</li>
+                <li><i style="color: white; padding-right: 10px;" class="fa-solid fa-envelope"></i>Email : demo@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+    <!-- ===============================================script js file link=========================================== -->
+    <script src="script.js">
+
+    </script>
+
+</body>
+
+</html>

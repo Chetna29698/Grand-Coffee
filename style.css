@@ -1,0 +1,702 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    padding-left: 50px;
+}
+
+.logo:hover {
+    color: rgb(209, 147, 65);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.nav-links li {
+    margin-left: 100px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+}
+
+.nav-links a:hover::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 28px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    padding-right: 50px;
+}
+
+@media (max-width: 960px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 200px;
+        line-height: 40px;
+        font-size: 50px;
+        transition: max-height 10s ease-in-out;
+        max-height: 0;
+        overflow-y: hidden;
+    }
+
+    .nav-links li a {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: none;
+        background-color: whitesmoke;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        padding-left: 150px;
+    }
+}
+
+@media (max-width: 580px) {
+    .nav-links {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        padding-left: 80px;
+    }
+}
+
+@media (max-width: 250px) {
+    .nav-links {
+        display: none;
+
+    }
+
+}
+
+
+/* =======================================home div css======================================= */
+
+#home {
+    height: 700px;
+    width: 100%;
+    background-image: url(img/coffee.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+#home #contain {
+    height: 600px;
+    width: 600px;
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 70px;
+}
+
+#home #contain h1 {
+    font-size: 70px;
+}
+
+#home #contain h2 {
+    font-size: 45px;
+    padding-top: 20px;
+    color: white;
+}
+
+#home #contain p {
+    font-size: 17px;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+#home #contain button {
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    padding: 15px 20px 15px 20px;
+}
+
+#home #contain button:hover {
+    border: 2px solid black;
+    background-color: transparent;
+    /* font-size: 19px; */
+}
+
+@media (max-width:450px) {
+    #home #contain h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* =====================================about us css========================================= */
+
+#about {
+    height: 500px;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about #about-text {
+    height: 500px;
+    width: 50%;
+    /* background-color: rgb(197, 248, 187); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about #about-text h2 {
+    font-size: 40px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#about #about-text h2:hover {
+    color: rgb(209, 147, 65);
+}
+
+#about #about-text ul {
+    padding-left: 70px;
+    padding-right: 70px;
+    line-height: 35px;
+}
+
+#about #about-text ul li {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#about #about-img {
+    height: 500px;
+    width: 50%;
+    /* background-color: rgb(250, 193, 167); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about #about-img img {
+    border: 15px groove burlywood;
+    overflow: hidden;
+    transition: 1s all linear;
+}
+
+#about #about-img img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:1380px) {
+    #about #about-text ul li {
+        font-size: 19px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width:1315px) {
+    #about #about-text ul li {
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width:1255px) {
+    #about #about-text ul li {
+        font-size: 17px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width:1200px) {
+    #about #about-text ul li {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width:1150px) {
+    #about #about-text ul li {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width:1050px) {
+    #about #about-text ul li {
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+
+    #about #about-text ul {
+        padding-right: 25px;
+
+    }
+
+}
+
+@media (max-width:1000px) {
+    #about #about-text ul li {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width:900px) {
+    #about #about-text ul li {
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+}
+@media (max-width:870px) {
+    #about #about-text ul li {
+        font-size: 12px;
+        padding-bottom: 5px;
+    }
+}
+@media (max-width:800px) {
+    #about {
+        height: 700px;
+    }
+}
+@media (max-width:700px) {
+    #about {
+        height: 800px;
+    }
+}
+
+/* ============================================gallery css======================================== */
+
+#gallery{
+    height: auto;
+    width: 100%;
+    /* background-color: violet; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#gallery h1{
+    font-size: 45px;
+    padding-top: 30px;
+}
+#gallery h1:hover{
+    color: rgb(209, 147, 65);
+}
+#gallery p{
+    font-size: 20px;
+    padding: 30px 200px 0px 200px;
+}
+#gallery #grid{
+    height: auto;
+    width: 80%;
+    /* background-color: rgb(251, 96, 150); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    grid-template-rows: 340px 340px 340px;
+    gap: 60px;
+    overflow: hidden;
+
+}
+#gallery #grid .grid-item img{
+    height: 270px;
+    width: 340px;
+}
+#gallery #grid .grid-item img:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width:1400px) {
+    #gallery #grid{
+        display: grid;
+        grid-template-columns: 340px 340px ;
+        grid-template-rows: 340px 340px ;
+    }
+}
+@media (max-width:1000px) {
+    #gallery #grid{
+        display: grid;
+        grid-template-columns: 340px  ;
+        grid-template-rows: 340px  ;
+    }
+}
+
+/* ===========================================services css============================================== */
+
+#services{
+    height: auto;
+    width: 100%;
+    /* background-color: rosybrown; */
+    background-image: url(img/servcie-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+#services h1{
+    color: white;
+    font-size: 60px;
+}
+#services p{
+    color: white;
+    font-size: 20px;
+    padding-left: 280px;
+    padding-right: 280px;
+    padding-top: 30px;
+}
+#services #service-div{
+    height: 450px;
+    width: 80%;
+    /* background-color: darkcyan; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* ==============================original-coffee============================ */
+#services #service-div .original-coffee{
+    height: 300px;
+    width: 350px;
+    background-color: rgb(241, 101, 50);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#services #service-div .original-coffee:hover{
+    height: 350px;
+    
+}
+#services #service-div .original-coffee .fa-mug-saucer{
+    font-size: 50px;
+    color: white;
+    padding-top: 30px;
+}
+#services #service-div .original-coffee h2{
+    font-size: 39px;
+    color: white;
+    padding-top: 30px;
+}
+#services #service-div .original-coffee small{
+    font-size: 16px;
+    color: white;
+    padding: 30px 20px 0px 20px;
+    padding-top: 30px;
+}
+#services #service-div .original-coffee #ori-btn{
+    padding: 5px 10px 5px 10px;
+    display: none;
+    font-size: 20px;
+    margin-top: 48px;
+}
+/* ==========================.coffee-flavor=============================== */
+#services #service-div .coffee-flavor{
+    height: 300px;
+    width: 350px;
+    background-color: rgb(241, 101, 50);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#services #service-div .coffee-flavor:hover{
+    height: 350px;
+}
+#services #service-div .coffee-flavor .fa-mug-hot{
+    font-size: 50px;
+    color: white;
+    padding-top: 30px;
+}
+#services #service-div .coffee-flavor h2{
+    font-size: 39px;
+    color: white;
+    padding-top: 30px;
+}
+#services #service-div .coffee-flavor small{
+    font-size: 16px;
+    color: white;
+    padding: 30px 30px 0px 40px;
+}
+#services #service-div .coffee-flavor #flav-btn{
+    padding: 5px 10px 5px 10px;
+    display: none;
+    font-size: 20px;
+    margin-top: 48px;
+}
+/* ==========================.pleasant-abient================================= */
+#services #service-div .pleasant-abient{
+    height: 300px;
+    width: 350px;
+    background-color: rgb(241, 101, 50);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#services #service-div .pleasant-abient:hover{
+    height: 350px;
+}
+#services #service-div .pleasant-abient .fa-mug-saucer{
+    font-size: 50px;
+    color: white;
+    padding-top: 30px;
+}
+#services #service-div .pleasant-abient h2{
+    font-size: 39px;
+    color: white;
+    padding-top: 30px;
+}
+#services #service-div .pleasant-abient small{
+    font-size: 16px;
+    color: white;
+    padding: 30px 30px 0px 30px;
+}
+#services #service-div .pleasant-abient #abi-btn{
+    padding: 5px 10px 5px 10px;
+    display: none;
+    font-size: 20px;
+    margin-top: 48px;
+}
+
+/* ==================================contact us =================================== */
+#contact{
+    height: 600px;
+    width: 100%;
+    /* background-color: antiquewhite;   */
+    
+}
+#contact h1{
+    color: orangered;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+#contact #div{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(94, 174, 249);  
+    display: flex;
+    justify-content: center;
+}
+#form{
+    height: 500px;
+    width: 50%;
+    /* background-color: rgb(248, 199, 142); */
+    background-image: url(img/servcie-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.form #name{
+    height: 40px;
+    width: 90%;
+    border-radius: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+.form #email{
+    height: 40px;
+    width: 90%;
+    border-radius: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+.form #num{
+    height: 40px;
+    width: 90%;
+    border-radius: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+.form #mess{
+    height: 120px;
+    width: 90%;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-size: 19px;
+}
+.form #send_btn{
+    height: 40px;
+    width: 30%;
+    border-radius: 20px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    background-color: orangered;
+    color: white;
+    border: none;
+}
+
+#map{
+    height: 500px;
+    width: 50%;
+    /* background-color: rgb(153, 248, 142); */
+}
+
+/* ============================================footer div css========================================= */
+#footer{
+    height: 350px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fabout{
+    height: 350px;
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#fabout h2{
+    padding-top: 50px;
+}
+#fabout p{
+    padding: 20px 10px 0px 20px;
+}
+#fmenu{
+    height: 350px;
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#fmenu h2{
+    padding-top: 50px;
+}
+#fmenu ul{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 20px;
+
+}
+#fmenu ul li{
+    padding-top: 10px;
+}
+#flink{
+    height: 350px;
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#flink h2{
+    padding-top: 50px;
+}
+#flink ul{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 20px;
+
+}
+#flink ul li{
+    padding-top: 10px;
+}
+#fcontact{
+    height: 350px;
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#fcontact h2{
+    padding-top: 50px;
+}
+#fcontact ul{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+#fcontact ul li{
+    padding-top: 20px;
+}
